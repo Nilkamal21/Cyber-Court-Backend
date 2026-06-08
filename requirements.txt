@@ -5,6 +5,7 @@ langchain-core
 langchain-groq
 langsmith
 supabase
+neo4j
 redis
 reportlab
 jinja2
