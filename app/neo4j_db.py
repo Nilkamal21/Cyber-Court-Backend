@@ -37,10 +37,10 @@ def get_db_driver():
     # Force load environment variables freshly from disk
     load_dotenv(override=True)
     
-    # Raw credentials fallback chain
-    URI = os.getenv("NEO4J_URI", "neo4j+s://800c6edc.databases.neo4j.io")
-    USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
-    PASSWORD = os.getenv("NEO4J_PASSWORD", "KWdwIj6YvZvGcwogOItS7hEqOgBTYYk9AjGD1hMslUU")
+    # Raw credentials fallback chain (Read strictly from OS Environment)
+    URI = os.getenv("NEO4J_URI")
+    USERNAME = os.getenv("NEO4J_USERNAME")
+    PASSWORD = os.getenv("NEO4J_PASSWORD")
 
     try:
         # Use native basic_auth wrapping to bypass driver string encoding bugs
